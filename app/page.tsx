@@ -2,101 +2,106 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="min-h-screen bg-gradient-to-br from-[#181818] to-[#3a2c1a] flex flex-col items-center justify-between py-8 px-4 sm:px-0 font-[family-name:var(--font-geist-sans)]">
+      {/* HEADER */}
+      <header className="flex flex-col items-center gap-2 mb-8">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 tracking-wide drop-shadow-lg text-center">
+          ARENA GLAMOUR FUTSAL
+        </h1>
+        <p className="text-lg italic text-yellow-200 mb-2 text-center">
+          "Where Champions Play"
+        </p>
+        <p className="text-sm text-gray-200 text-center">
+          Jl. Sport Raya No.88, Jakarta
+          <br />
+          Telp: <a href="tel:02188887777" className="underline"> (021) 8888-7777</a>
+        </p>
+      </header>
+
+      {/* LOGO */}
+      <div className="flex justify-center mb-8">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/futsal-logo-gold.svg"
+          alt="Logo Arena Glamour Futsal"
+          width={120}
+          height={120}
+          className="drop-shadow-xl"
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly. dadadadad
-          </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* HARGA SEWA LAPANGAN */}
+      <section className="w-full max-w-md bg-[#232323]/80 rounded-xl shadow-lg p-6 mb-8">
+        <h2 className="text-center text-lg font-bold text-yellow-300 mb-4 tracking-widest">
+          HARGA SEWA LAPANGAN
+        </h2>
+        <div className="border-t border-yellow-700 mb-4" />
+        {/* Paket Member */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-2xl">⚽</span>
+            <span className="font-semibold text-yellow-200">PAKET MEMBER</span>
+          </div>
+          <div className="text-2xl font-bold text-yellow-400 mb-1">Rp 95.000<span className="text-base font-medium text-yellow-200">/jam</span></div>
+          <ul className="list-disc list-inside text-sm text-gray-100 pl-2 space-y-1">
+            <li>Prioritas booking</li>
+            <li>Free konsultasi pelatih</li>
+            <li>Diskon merchandise</li>
+            <li>Poin reward</li>
+          </ul>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="border-t border-yellow-700 mb-4" />
+        {/* Paket Reguler */}
+        <div className="mb-2">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-2xl">⚽</span>
+            <span className="font-semibold text-yellow-200">PAKET REGULER</span>
+          </div>
+          <div className="text-2xl font-bold text-yellow-400 mb-1">Rp 110.000<span className="text-base font-medium text-yellow-200">/jam</span></div>
+          <ul className="list-disc list-inside text-sm text-gray-100 pl-2 space-y-1">
+            <li>Booking 24 jam</li>
+            <li>Lapangan sintetis premium</li>
+            <li>Pencahayaan profesional</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* FASILITAS UNGGULAN */}
+      <section className="w-full max-w-md bg-[#232323]/80 rounded-xl shadow-lg p-6 mb-8">
+        <h2 className="text-center text-lg font-bold text-yellow-300 mb-4 tracking-widest">
+          FASILITAS UNGGULAN
+        </h2>
+        <ul className="text-gray-100 text-sm space-y-2 pl-2">
+          <li>✓ 2 lapangan standar internasional</li>
+          <li>✓ Ruang ganti premium</li>
+          <li>✓ Lounge ber-AC</li>
+          <li>✓ Tempat parkir luas</li>
+          <li>✓ Cafe dengan menu sehat</li>
+        </ul>
+      </section>
+
+      {/* PROMO KHUSUS */}
+      <section className="w-full max-w-md bg-gradient-to-r from-yellow-700/80 to-yellow-400/80 rounded-xl shadow-lg p-6 mb-8">
+        <h2 className="text-center text-lg font-bold text-white mb-4 tracking-widest">
+          PROMO KHUSUS
+        </h2>
+        <ul className="text-white text-sm space-y-2 pl-2">
+          <li>» Daftar member hari ini - <span className="font-semibold text-yellow-900">Gratis 1 jam main!</span></li>
+          <li>» Weekend package: <span className="font-semibold">2 jam = Rp 170.000</span> <span className="text-yellow-900">(member)</span></li>
+        </ul>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="w-full max-w-md flex flex-col items-center gap-2 text-gray-200 text-sm py-4 border-t border-yellow-700">
+        <div className="flex gap-4 items-center">
+          <span>📱 Instagram: <a href="https://instagram.com/arenaglamour_futsal" target="_blank" rel="noopener noreferrer" className="underline">@arenaglamour_futsal</a></span>
+        </div>
+        <div className="flex gap-4 items-center">
+          <span>📞 WA Booking: <a href="https://wa.me/628112222333" target="_blank" rel="noopener noreferrer" className="underline">0811-2222-333</a></span>
+        </div>
+        <div className="flex gap-4 items-center">
+          <span>🕒 Operasional: 08.00-23.00 WIB</span>
+        </div>
       </footer>
     </div>
   );
